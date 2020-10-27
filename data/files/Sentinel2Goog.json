@@ -1,0 +1,52 @@
+{"eodatadown":
+{
+    "sensor":
+    {
+        "name":"Sentinel2GOOG",
+        "paths":
+        {
+            "download":"/data/s2g/downloads",
+            "ardwork":"/data/s2g/adr_work",
+            "ardfinal":"/data/s2g/ard",
+            "ardtmp":"/data/s2g/tmp",
+            "quicklooks":"/data/s2g/quicklook",
+            "tilecache":"/data/s2g/tilecache"
+        },
+        "ardparams":
+        {
+            "dem":"/data/files/walesdtm.asc",
+            "proj":
+            {
+                "epsg":27700,
+                "projabbv":"osgb"
+            },
+            "roi":
+            {
+                "intersect":
+                {
+                    "vec_file":"/data/files/extent_test.gpkg",
+                    "vec_layer":"intersect"
+                },
+                "subset":
+                {
+                    "vec_file":"/data/files/extent_test.gpkg",
+                    "vec_layer":"subset"
+                }
+            }
+        },
+        "download":
+        {
+            "granules":[
+                "30UVD"
+            ],
+            "cloudcover":40,
+            "startdate":"2020-02-05"
+        },
+        "googleinfo":
+        {
+            "projectname":"eodd",
+            "googlejsonkey":"/data/files/eodd-7cabffddb3f8.json"
+        }
+    }
+}
+}

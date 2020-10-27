@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+    eodd:
+        image: petebunting/eodatadown
+        restart: always
+        stdin_open: true
+        tty: true
+        entrypoint: /bin/sh
+        volumes:
+            - ./data:/data
+    db:
+        image: postgres:latest
+        restart: always
+        environment: 
+            - POSTGRES_DB=postgres
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        volumes:
+            - ./database_data:/var/lib/postgresql/data
+
+
+volumes: 
+    database_data: {}
+    data: {}

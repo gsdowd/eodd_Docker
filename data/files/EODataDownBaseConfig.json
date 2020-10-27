@@ -1,0 +1,21 @@
+{
+    "eodatadown":
+    {
+        "details":
+        {
+            "name":"EODD Test",
+            "description":"Test install"
+        },
+        "database":
+        {
+            "connection":"postgresql://postgres:postgres@db/postgres"
+        },
+        "sensors":
+        {
+            "Sentinel2GOOG":
+            {
+                "config":"/data/files/Sentinel2Goog.json"
+            }
+        }
+    }
+}
